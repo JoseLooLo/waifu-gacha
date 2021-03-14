@@ -1,6 +1,5 @@
 
 #include <database/sqlite3.h>
-#include <waifu/database/database.h>
 #include <string>
 #include <iostream>
 

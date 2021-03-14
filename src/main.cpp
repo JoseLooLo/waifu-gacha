@@ -1,12 +1,12 @@
 
 #include <iostream>
-#include <waifu/interface/interface.h>
 #include <domain/conta.h>
-#include <waifu/database/database.h>
+#include <database/sqlite3.h>
+#include <interface/cli.h>
 
 Conta* conta;
 Database *database;
 
 int main() {
-    return interface_init();
+    return cli_interface_init();
 }

@@ -6,14 +6,30 @@
 	#include <string>
 
 /*============================================================================*
- * Exported Interface                                                         *
+ * Database Interface                                                         *
  *============================================================================*/
 
-	#define ___database_start_fn
-	#define ___database_create_account_fn
-	#define ___database_login_account_fn
-	#define ___database_type
+	class Database {
+		private:
+			sqlite3 *database;
+		public:
+			/**
+			 * Database start
+			 */
+			void database_start(std::string db);
+			/**
+			 * Database end
+			 */
+			void database_end(void);
+			/**
+	 		* Database Create account
+	 		*/	
+			int database_create_account(std::string account_login, std::string account_password);
+			/**
+			 * Database Login
+			 */
+			int database_login_account(std::string account_login, std::string account_password);
+	};
 
-	#define DATABASE_TYPE sqlite3
 
 #endif  /* DATABASE_SQLITE3_H_ */

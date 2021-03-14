@@ -2,10 +2,6 @@
 #ifndef INTERFACE_CLI_H_
 #define INTERFACE_CLI_H_
 
-extern int cli_interface_init(void);
-
-#define ___interface_init_fn
-
 /*============================================================================*
  * Exported Interface                                                         *
  *============================================================================*/
@@ -14,9 +10,7 @@ extern int cli_interface_init(void);
 	 * Database start
 	 */
 
-	int interface_init(void) {
-        return cli_interface_init();
-    }
+	extern int cli_interface_init(void);
 
 
 #endif  /* INTERFACE_CLI_H_ */
