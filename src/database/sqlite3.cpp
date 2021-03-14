@@ -12,12 +12,6 @@ void Database::database_start(std::string db) {
 		exit(1);
 	}
 
-	std::string sql = "CREATE TABLE IF NOT EXISTS Conta(" \
-      "Login PRIMARY KEY NOT NULL," \
-      "Senha TEXT NOT NULL);";
-
-	/* Execute SQL statement */
-	sqlite3_exec(this->database, sql.c_str(), NULL, NULL, NULL);
 	Database::database_end();
 	return;
 }
