@@ -1,11 +1,15 @@
 #include <iostream>
 #include <string>
 #include <domain/conta.h>
+#include <database/sqlite3.h>
 
 /**
  *  This class should be the main class of the interface.
  *  All interactions with the user should be done through this class
  */
+
+Conta* conta;
+Database *database = new Database("waifuG.sqlite3");
 
 void cli_clear(void);
 void account(void);
@@ -20,7 +24,8 @@ void cli_clear(void) {
 
 int cli_interface_init(void) {
     cli_clear();
-    account();
+    database->getAllCharacters();
+    //account();
     std::cout << "Saindo...." << std::endl;
     return 0;
 }
@@ -36,7 +41,7 @@ void account(void) {
         if (op == "1") {
             //
         } else if (op == "2") {
-            account_login();
+            database->getAllCharacters();
         } else if (op == "3") {
             return;
         } else {
