@@ -3,6 +3,7 @@
 #define DATABASE_SQLITE3_H_
 
 	#include <sqlite3.h>
+	#include <vector>
 	#include <string>
 
 /*============================================================================*
@@ -25,7 +26,7 @@
 			 */
 			int database_login_account(std::string account_login, std::string account_password);
 	
-			void getAllCharacters(void);
+			std::vector<std::vector<std::string>> getAllCharacters(void);
 	};
 
 
